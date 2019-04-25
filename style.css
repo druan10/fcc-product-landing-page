@@ -1,0 +1,88 @@
+/* Basic Body Styling */
+
+body {
+    background: black;
+    color: #fff;
+    text-align: center;
+    font-family: 'Unica One', cursive;
+    padding: 0;
+    margin: 0;
+}
+
+body a {
+    color: white;
+}
+
+/* Navbar Styling */
+nav {
+    color: #ddd;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav h2 {
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    list-style: none;
+    border-bottom: 1px dotted #ddd;
+}
+
+nav a, nav li {
+    display: block;
+    padding: .5rem .5rem;
+}
+
+/* Logo Styling */
+
+#logo {
+    line-height: 0;
+    padding: 0;
+    margin: auto;
+}
+
+#logo img {
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 0;
+}
+
+section{
+    margin: 3em;
+    border-bottom: 2px dotted #ddd;
+}
+
+.section-title {
+    text-decoration: underline;
+}
+
+
+/* Media Queries */
+@media only screen and (min-width: 30em) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    nav ul {
+        display: flex;
+        align-items: center;
+    }
+    nav li {
+        border-bottom: none;
+    }
+    nav h2 {
+        padding: 0em 1em;
+        border-right: 1px solid #ddd;
+    }
+    #logo {
+        margin: 0;
+    }
+}
+
