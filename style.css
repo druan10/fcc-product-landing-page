@@ -1,12 +1,13 @@
 /* Basic Body Styling */
 
-body {
-    background: black;
+html, body {
+    background: rgb(11, 10, 15);
     color: #fff;
     text-align: center;
     font-family: 'Unica One', cursive;
     padding: 0;
     margin: 0;
+    font-size: 18px;
 }
 
 body a {
@@ -14,7 +15,9 @@ body a {
 }
 
 /* Navbar Styling */
+
 nav {
+    background: #000000;
     color: #ddd;
     padding: 0;
     margin: 0;
@@ -27,11 +30,22 @@ nav ul {
 nav h2 {
     padding: 0;
     margin: 0;
+    border-bottom: 1px solid #ddd;
 }
 
 nav li {
     list-style: none;
-    border-bottom: 1px dotted #ddd;
+    border-bottom: 1px dashed #ddd;
+    background: #2a2a2a;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #2a2a2a 0%, #000000 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #2a2a2a 0%, #000000 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #2a2a2a 0%, #000000 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2a2a', endColorstr='#000000', GradientType=0);
+    /* IE6-9 */
 }
 
 nav a, nav li {
@@ -43,7 +57,7 @@ nav a, nav li {
 
 #logo {
     line-height: 0;
-    padding: 0;
+    padding: 10px;
     margin: auto;
 }
 
@@ -54,35 +68,75 @@ nav a, nav li {
     padding: 0;
 }
 
-section{
-    margin: 3em;
-    border-bottom: 2px dotted #ddd;
+section {
+    margin: 0em 1em;
+    border-bottom: 2px solid rgb(53, 53, 53);
 }
 
 .section-title {
     text-decoration: underline;
 }
 
+#overview img{
+    display: block;
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Iframe styling */
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 
 /* Media Queries */
-@media only screen and (min-width: 30em) {
+
+@media only screen and (min-width: 50em) {
     nav {
         display: flex;
         justify-content: space-between;
+        border-bottom: 1px solid #ddd;
     }
     nav ul {
         display: flex;
         align-items: center;
+        background: #000000;
     }
     nav li {
         border-bottom: none;
+        background: #000000;
     }
     nav h2 {
         padding: 0em 1em;
         border-right: 1px solid #ddd;
+        border-bottom: none;
     }
     #logo {
         margin: 0;
     }
-}
+    section {
+        margin: 3em 10em;
+        padding-bottom: 1em;
+    }
 
+
+    #overview-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
